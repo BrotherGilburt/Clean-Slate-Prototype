@@ -1,23 +1,45 @@
+body {
+  font-family: sans-serif;
+  font-size: 16px;
+  color: black;
+}
+
 .page_header {
-
+  display: flex;
+  align-items: flex-end;
 }
 
-.page_navigation {
-
+.navigation_list {
+  display: flex;
 }
 
-page_content {
+.navigation_list li {
+  padding: 10px;
+}
+
+.page_body {
+  display: flex;
+  width: 900px;
+  margin: 10px auto;
+}
+
+.page_content {
+  width: calc(100% - 200px);
   
 }
 
 page_sidebar {
-
+  width: 200px;
 }
 
 .navigation_list {
-
+  list-style: none;
 }
 
-page_footer {
+.page_footer {
+  display: flex;
+}
 
+.footer_panel {
+  width: calc(100% /3);
 }
