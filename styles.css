@@ -1,45 +1,128 @@
+/* General */ 
+
+html, body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  min-height: 100vh;
+}
+
+* {
+  box-sizing: inherit;
+}
+
+:root {
+  --primary_color: rgb(250,70,22);
+  --secondary_color: rgb(189,189,189);
+}
+
 body {
   font-family: sans-serif;
   font-size: 16px;
   color: black;
 }
 
+.page_width {
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* Header */
 .page_header {
+  height: 200px;
+  margin-bottom: 20px;
   display: flex;
+  flex-flow: row wrap;
   align-items: flex-end;
+  align-content: flex-end;
 }
 
-.navigation_list {
+.header_navigation {
+  font-size: 26px;
+  font-weight: 500;
+}
+
+.header_navigation ul li {
+  margin-right: 10px;
+}
+
+.header_navigation ul li a {
+  border-bottom: 5px solid var(--secondary_color);
+}
+
+.header_navigation ul li a:hover {
+  border-bottom: 5px solid var(--primary_color);
+}
+
+/* Navigation List */
+.navigation_list ul {
+  margin: 0;
   display: flex;
-}
-
-.navigation_list li {
-  padding: 10px;
-}
-
-.page_body {
-  display: flex;
-  width: 900px;
-  margin: 10px auto;
-}
-
-.page_content {
-  width: calc(100% - 200px);
-  
-}
-
-page_sidebar {
-  width: 200px;
-}
-
-.navigation_list {
   list-style: none;
 }
 
+.navigation_list ul li a {
+  display: block;
+  box-sizing: inherit;
+  padding: 10px 20px;
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Page Content */
+.page_body {
+  display: flex;
+  margin-bottom: 200px;
+}
+
+.page_content h1 {
+  margin: 0 0 10px 0;
+  color: var(--primary_color);
+}
+
+.page_content {
+  padding: 0 20px 20px 0;
+  width: calc(100% - 300px);
+}
+
+/* Sidebar */
+.page_sidebar {
+  width: 300px;
+  padding: 10px;
+}
+
+.sidebar_navigation ul {
+  padding: 0;
+  display: flex;
+  flex-flow: column nowrap;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.sidebar_navigation ul li {
+  margin-bottom: 5px;
+}
+
+.sidebar_navigation ul li a {
+  color: white;
+  background-color: var(--primary_color);
+}
+
+.sidebar_navigation ul li:hover {
+  filter: brightness(85%);
+}
+
+/* Footer */
 .page_footer {
   display: flex;
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  background: var(--secondary_color);
 }
 
 .footer_panel {
+  padding: 10px;
+  height: 200px;
   width: calc(100% /3);
 }
