@@ -38,18 +38,19 @@ body {
 
 h1 {
   margin: 0 0 10px 0;
+  font-size: 2rem;
   color: var(--primary_color);
 }
 
 h2 {
   margin: 0;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   color: var(--primary_color);
 }
 
 h3 {
   margin: 0;
-  font-size: 1rem;
+  font-size: 1.2rem;
   color: var(--primary_color);
 }
 
@@ -223,6 +224,14 @@ p {
 }
 
 /* Footer */
+.page_footer p {
+  margin: 0;
+}
+
+.page_footer li {
+  list-style: none;
+}
+
 .page_footer {
   width: 100%;
   margin-top: 20px;
