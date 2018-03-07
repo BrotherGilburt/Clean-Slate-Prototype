@@ -163,7 +163,7 @@ p {
   width: 100%;
 }
 
-/* Post */
+/* Preview Post */
 
 .content_preview_post {
   display: flex;
@@ -176,7 +176,7 @@ p {
 .preview_post_image {
   flex: none;
   min-width: 250px;
-  width: 40%;
+  width: 33%;
 }
 
 .preview_post_image img {
