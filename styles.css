@@ -1,26 +1,24 @@
 /* Fonts */
-
 @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro');
-/* Colors */
 
+/* Colors */
 :root {
+  --dark-color: black;
+  --light-color: white;
   --primary-color: rgb(250, 70, 22);
   --primary-color-dark: rgb(175, 50, 15);
   --secondary-color: rgb(189, 189, 189);
-  --light-color: white;
-  --dark-color: black;
 }
 
 /* General */
-
 html,
 body {
-  margin: 0;
-  padding: 0;
   box-sizing: border-box;
-  min-height: 100vh;
-  font-size: 20px;
   color: var(--dark-color);
+  font-size: 20px;
+  margin: 0;
+  min-height: 100vh;
+  padding: 0;
 }
 
 * {
@@ -28,34 +26,34 @@ body {
 }
 
 body {
-  min-width: 280px;
-  font-family: 'Source Sans Pro', sans-serif;
   display: flex;
   flex-flow: column nowrap;
+  font-family: 'Source Sans Pro', sans-serif;
+  min-width: 280px;  
 }
 
 .page-width {
+  margin: auto;
   max-width: 1200px;
   width: 90%;
-  margin: auto;
 }
 
 h1 {
-  margin: 0;
-  font-size: 2rem;
   color: var(--primary-color);
+  font-size: 2rem;
+  margin: 0;
 }
 
 h2 {
-  margin: 0;
-  font-size: 1.4rem;
   color: var(--primary-color);
+  font-size: 1.4rem;
+  margin: 0;
 }
 
 h3 {
-  margin: 0;
-  font-size: 1.2rem;
   color: var(--primary-color);
+  font-size: 1.2rem;
+  margin: 0;
 }
 
 p {
@@ -69,9 +67,9 @@ figure {
 }
 
 img {
-  max-width: 100%;
-  height: auto;
   display: block;
+  height: auto;
+  max-width: 100%;
 }
 
 a {
@@ -87,24 +85,23 @@ a:active {
 }
 
 /* Header */
-
 .page-header {
-  background-color: var(--primary-color);
-  color: var(--light-color);
-  width: 100%;
-  margin-bottom: 20px;
-  display: flex;
   align-items: flex-start;
+  background-color: var(--primary-color);
   box-shadow: 3px 3px 3px var(--secondary-color);
+  color: var(--light-color);
+  display: flex;
+  margin-bottom: 20px;
+  width: 100%;
 }
 
 .header-content {
-  min-height: 100px;
-  display: flex;
-  flex-flow: row nowrap;
   align-items: flex-end;
   align-content: flex-end;
+  display: flex;
+  flex-flow: row nowrap;
   justify-content: flex-start;
+  min-height: 100px;
 }
 
 .header-logo {
@@ -116,30 +113,32 @@ a:active {
 }
 
 .header-navigation ul {
-  padding: 0 0 0 10px;
-  font-size: 1.6rem;
+  align-items: flex-end;
   display: flex;
   flex-flow: row wrap;
+  font-size: 1.6rem;
   justify-content: flex-start;
+  padding: 0 0 0 10px;
 }
 
 .header-navigation ul li {
-  box-sizing: inherit;
   background-color: inherit;
+  box-sizing: inherit;
   min-width: 135px;
 }
 
 .header-navigation ul li a {
+  border-bottom: 0px solid white;
   padding: 5px 0 0 10px;
-  border-bottom: 5px solid var(--primary-color);
+  transition: border-bottom .2s;
   width: 100%;
 }
 
 .header-navigation ul li a:hover,
 .header-navigation ul li a:active {
+  background-color: inherit;
   border-bottom: 5px solid var(--light-color);
   color: inherit;
-  background-color: inherit;
 }
 
 .header-navigation ul li a:active {
@@ -152,19 +151,20 @@ a:active {
   border-bottom: 5px solid var(--primary-color);
 }
 
+/*Header Menu Link (Mobile)*/
 #header-navigation-menu-link {
+  align-items: center;
   color: white;
   display: none;
   font-size: 48px;
-  line-height: 48px;
   margin: 10px 0 0 10px;
   text-decoration: none;
 }
 
 .header-menu-label {
   color: inherit;
-  font-size: .6em;
   display: block;
+  font-size: .6em;
   padding-left: 5px;
 }
 
@@ -199,22 +199,20 @@ a:active {
 }
 
 /* Navigation List */
-
 .navigation-list ul {
-  margin: 0;
   display: flex;
   list-style: none;
+  margin: 0;
 }
 
 .navigation-list ul li a {
-  display: block;
   box-sizing: inherit;
-  text-decoration: none;
   color: inherit;
+  display: block;
+  text-decoration: none;
 }
 
 /* Page Content */
-
 .page-body {
   display: flex;
   flex: 1;
@@ -226,25 +224,24 @@ a:active {
 }
 
 .content-featured-image {
-  width: 100%;
   margin-bottom: 5px;
+  width: 100%;
 }
 
 /* Post Loop */
-
 .content-preview-post {
+  align-items: center;
+  border-bottom: 2px solid var(--secondary-color);
   display: flex;
   flex-flow: row nowrap;
-  align-items: center;
-  padding-bottom: 10px;
-  border-bottom: 2px solid var(--secondary-color);
   margin-bottom: 10px;
+  padding-bottom: 10px;
 }
 
 .content-preview-post:last-of-type {
-  padding-bottom: 0;
   border-bottom: none;
   margin-bottom: 0;
+  padding-bottom: 0;
 }
 
 .preview-post-image {
@@ -259,19 +256,17 @@ a:active {
 }
 
 /* Sidebar */
-
 .page-sidebar {
   flex: none;
-  width: 300px;
   padding: 0 10px 0 10px;
+  width: 300px;
 }
 
 .sidebar-navigation ul {
-  padding: 0;
   display: flex;
   flex-flow: column nowrap;
   font-size: 1.3rem;
-  font-weight: 500;
+  padding: 0;
 }
 
 .sidebar-navigation ul li {
@@ -279,11 +274,12 @@ a:active {
 }
 
 .sidebar-navigation ul li a {
-  padding: 10px 20px;
-  color: var(--light-color);
   background-color: var(--primary-color);
   border-radius: 10px;
   box-shadow: 2px 2px 2px var(--secondary-color);
+  color: var(--light-color);
+  padding: 10px 20px;
+  transition: margin-left .2s;
 }
 
 .sidebar-navigation ul li a:hover,
@@ -296,7 +292,6 @@ a:active {
 }
 
 /* Footer */
-
 .page-footer p {
   margin: 0;
 }
@@ -306,20 +301,22 @@ a:active {
 }
 
 .page-footer {
-  width: 100%;
   margin-top: 20px;
+  width: 100%;
 }
 
 .footer-content {
-  min-height: 200px;
   border-top: 3px solid var(--secondary-color);
   display: flex;
   justify-content: space-between;
+  min-height: 200px;
 }
 
 .footer-section {
   padding: 10px;
 }
+
+/* Media Queries */
 
 @media all and (max-width: 1000px) {
   .page-width {
@@ -329,14 +326,14 @@ a:active {
 
 @media all and (max-width: 850px) {
   .page-body {
-    flex-flow: column nowrap;
     align-items: flex-end;
     align-content: flex-end;
+    flex-flow: column nowrap;
   }
   .page-content {
     flex: none;
-    width: 100%;
     margin-bottom: 20px;
+    width: 100%;
   }
   .page-sidebar {
     flex: 1;
@@ -365,9 +362,9 @@ a:active {
     padding-bottom: 10px;
   }
   #header-navigation-menu-link {
+    align-self: flex-start;
     display: flex;
     flex-flow: row nowrap;
-    align-self: flex-start;
   }
   .header-navigation {
     display: none;
@@ -375,8 +372,8 @@ a:active {
     width: 100%;
   }
   .header-navigation ul {
-    flex-flow: column nowrap;
     align-items: center;
+    flex-flow: column nowrap;
     padding-left: 0;
     width: 100%;
   }
@@ -392,12 +389,3 @@ a:active {
     width: 100%;
   }
 }
-
-/*
- * Restore visibility of header navigation menu.
- *
-@media all and (min-width: 401px) {
-  .header-navigation {
-    display: block !important;
-  }
-}*/
