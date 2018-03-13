@@ -76,7 +76,8 @@ a {
   color: var(--primary-color);
 }
 
-a:hover {
+a:hover,
+a:focus {
   text-decoration: none;
 }
 
@@ -108,6 +109,11 @@ a:active {
   flex: none;
 }
 
+.header-logo img{
+  height: 150px;
+  width: auto;
+}
+
 .header-navigation {
   font-weight: 500;
 }
@@ -135,7 +141,8 @@ a:active {
 }
 
 .header-navigation ul li a:hover,
-.header-navigation ul li a:active {
+.header-navigation ul li a:active,
+.header-navigation ul li a:focus {
   background-color: inherit;
   border-bottom: 5px solid var(--light-color);
   color: inherit;
@@ -216,6 +223,7 @@ a:active {
 .page-body {
   display: flex;
   flex: 1;
+  flex-flow: row-reverse nowrap;
 }
 
 .page-content {
@@ -284,7 +292,8 @@ a:active {
 
 .sidebar-navigation ul li.current-menu-item a,
 .sidebar-navigation ul li a:hover,
-.sidebar-navigation ul li a:active {
+.sidebar-navigation ul li a:active,
+.sidebar-navigation ul li a:focus {
   margin-left: 8%;
 }
 
@@ -319,17 +328,17 @@ a:active {
 
 /* Media Queries */
 
-@media all and (max-width: 1000px) {
+@media all and (max-width: 1200px) {
   .page-width {
     width: 100%;
   }
 }
 
-@media all and (max-width: 850px) {
+@media all and (max-width: 1000px) {
   .page-body {
     align-items: flex-end;
     align-content: flex-end;
-    flex-flow: column nowrap;
+    flex-flow: column-reverse nowrap;
   }
   .page-content {
     flex: none;
@@ -338,6 +347,45 @@ a:active {
   }
   .page-sidebar {
     flex: 1;
+  }
+}
+
+@media all and (max-width: 800px) {
+  .header-content {
+    align-items: center;
+    flex-flow: column nowrap;
+    padding-bottom: 10px;
+  }
+  .header-logo {
+    align-self: flex-start;
+  }
+  .header-navigation {
+    display: none;
+    padding: 0 10px;
+    width: 100%;
+  }
+  .header-navigation ul {
+    align-items: center;
+    flex-flow: column nowrap;
+    padding-left: 0;
+    width: 100%;
+  }
+  .header-navigation ul li {
+    width: 100%;
+  }
+  .header-navigation ul li a,
+  .header-navigation ul li a:hover,
+  .header-navigation ul li a:active,
+  .header-navigation ul li a:focus {
+    border-bottom: 2px solid var(--light-color) !important;
+  }
+  .header-navigation ul li a:focus {
+    background-color: var(--primary-color-dark);
+  }
+  #header-navigation-menu-link {
+    align-self: flex-start;
+    display: flex;
+    flex-flow: row nowrap;
   }
 }
 
@@ -357,35 +405,6 @@ a:active {
 }
 
 @media all and (max-width: 400px) {
-  .header-content {
-    align-items: center;
-    flex-flow: column nowrap;
-    padding-bottom: 10px;
-  }
-  #header-navigation-menu-link {
-    align-self: flex-start;
-    display: flex;
-    flex-flow: row nowrap;
-  }
-  .header-navigation {
-    display: none;
-    padding: 0 10px;
-    width: 100%;
-  }
-  .header-navigation ul {
-    align-items: center;
-    flex-flow: column nowrap;
-    padding-left: 0;
-    width: 100%;
-  }
-  .header-navigation ul li {
-    width: 100%;
-  }
-  .header-navigation ul li a,
-  .header-navigation ul li a:hover,
-  .header-navigation ul li a:active {
-    border-bottom: 2px solid var(--light-color) !important;
-  }
   .page-sidebar {
     width: 100%;
   }

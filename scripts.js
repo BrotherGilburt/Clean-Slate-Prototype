@@ -1,36 +1,40 @@
 window.addEventListener('DOMContentLoaded', function() {
-  let headerMenu = document.getElementById('header-navigation-menu')
-  let headerMenuLink = document.getElementById('header-navigation-menu-link')
-  let headerMenuLabel = document.getElementById('header-menu-label')
+  /* Elements */
+  const headerMenu = document.getElementById('header-navigation-menu')
+  const headerMenuLink = document.getElementById('header-navigation-menu-link')
+  const headerMenuLabel = document.getElementById('header-menu-label')
 
+  /* Media Queries */
+  const mobileMediaQueryString = '(max-width: 800px)'
+
+  function openMenu() {
+    headerMenu.style.display = 'block'
+    headerMenuLabel.innerHTML = 'Close'
+  }
+  
+  function closeMenu() {
+    headerMenu.style.display = 'none'
+    headerMenuLabel.innerHTML = 'Menu'
+  }
+  
   /*
    * Toggle header navigation menu visibility.
    */
   headerMenuLink.addEventListener('click', function() {
-    //Close menu.
-    if (headerMenu.style.display === 'block') {
-      headerMenu.style.display = 'none'
-      headerMenuLabel.innerHTML = 'Open'
-    
-    }
-    //Open menu.
-    else {
-      headerMenu.style.display = 'block'
-      headerMenuLabel.innerHTML = 'Close'
-    }
+    if (headerMenu.style.display === 'block') closeMenu()
+    else openMenu()
   })
 
-  let desktop = window.matchMedia('(max-width: 400px)')
+  const desktop = window.matchMedia(mobileMediaQueryString)
   desktop.onchange = function(e) {
     if (e.matches) {
       //Set menu for mobile screen sizes.
-      headerMenuLabel.innerHTML = 'Open'
-      headerMenu.style.display = 'none'
-      headerMenuLink.style.display = 'flex';
+      closeMenu()
+      headerMenuLink.style.display = 'flex'
     } else {
       //Set menu for tablet/desktop screen sizes.
       headerMenu.style.display = 'block'
-      headerMenuLink.style.display = 'none';
+      headerMenuLink.style.display = 'none'
     }
   }
 })
