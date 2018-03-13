@@ -7,10 +7,14 @@ window.addEventListener('DOMContentLoaded', function() {
    * Toggle header navigation menu visibility.
    */
   headerMenuLink.addEventListener('click', function() {
+    //Close menu.
     if (headerMenu.style.display === 'block') {
       headerMenu.style.display = 'none'
       headerMenuLabel.innerHTML = 'Open'
-    } else {
+    
+    }
+    //Open menu.
+    else {
       headerMenu.style.display = 'block'
       headerMenuLabel.innerHTML = 'Close'
     }
@@ -24,7 +28,7 @@ window.addEventListener('DOMContentLoaded', function() {
       headerMenu.style.display = 'none'
       headerMenuLink.style.display = 'flex';
     } else {
-      //Set menu for tablet/desktop screensizes.
+      //Set menu for tablet/desktop screen sizes.
       headerMenu.style.display = 'block'
       headerMenuLink.style.display = 'none';
     }
