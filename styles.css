@@ -145,10 +145,10 @@ a:active {
   background-color: var(--primary-color-dark);
 }
 
-.header-navigation ul li .selected {
-  background-color: var(--light-color);
-  color: var(--primary-color);
-  border-bottom: 5px solid var(--primary-color);
+.header-navigation ul li.current-menu-item a,
+.header-navigation ul li.current-menu-item a:hover,
+.header-navigation ul li.current-menu-item a:active {
+  border-bottom: 5px solid var(--light-color);
 }
 
 /*Header Menu Link (Mobile)*/
@@ -282,9 +282,10 @@ a:active {
   transition: margin-left .2s;
 }
 
+.sidebar-navigation ul li.current-menu-item a,
 .sidebar-navigation ul li a:hover,
 .sidebar-navigation ul li a:active {
-  margin-left: 10px;
+  margin-left: 8%;
 }
 
 .sidebar-navigation ul li a:active {
@@ -383,7 +384,7 @@ a:active {
   .header-navigation ul li a,
   .header-navigation ul li a:hover,
   .header-navigation ul li a:active {
-    border-bottom: 2px solid var(--light-color);
+    border-bottom: 2px solid var(--light-color) !important;
   }
   .page-sidebar {
     width: 100%;
