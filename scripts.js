@@ -7,6 +7,7 @@ window.addEventListener('DOMContentLoaded', function() {
   /* Media Queries */
   const mobileMediaQueryString = '(max-width: 800px)'
 
+  /* Menu Functions */
   function openMenu() {
     headerMenu.style.display = 'block'
     headerMenuLabel.innerHTML = 'Close'
