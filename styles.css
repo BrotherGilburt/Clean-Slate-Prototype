@@ -76,13 +76,16 @@ a {
   color: var(--primary-color);
 }
 
-a:hover,
-a:focus {
-  text-decoration: none;
-}
-
 a:active {
   color: var(--primary-color-dark);
+}
+
+a:focus {
+  outline: 1px dashed var(--secondary-color);
+}
+
+a:hover {
+  text-decoration: none;
 }
 
 /* Header */
@@ -141,8 +144,7 @@ a:active {
 }
 
 .header-navigation ul li a:hover,
-.header-navigation ul li a:active,
-.header-navigation ul li a:focus {
+.header-navigation ul li a:active {
   background-color: inherit;
   border-bottom: 5px solid var(--light-color);
   color: inherit;
@@ -292,8 +294,7 @@ a:active {
 
 .sidebar-navigation ul li.current-menu-item a,
 .sidebar-navigation ul li a:hover,
-.sidebar-navigation ul li a:active,
-.sidebar-navigation ul li a:focus {
+.sidebar-navigation ul li a:active {
   margin-left: 8%;
 }
 
@@ -375,12 +376,8 @@ a:active {
   }
   .header-navigation ul li a,
   .header-navigation ul li a:hover,
-  .header-navigation ul li a:active,
-  .header-navigation ul li a:focus {
+  .header-navigation ul li a:active {
     border-bottom: 2px solid var(--light-color) !important;
-  }
-  .header-navigation ul li a:focus {
-    background-color: var(--primary-color-dark);
   }
   #header-navigation-menu-link {
     align-self: flex-start;
