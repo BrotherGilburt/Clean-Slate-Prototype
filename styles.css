@@ -4,7 +4,7 @@
 /* Colors */
 :root {
   --dark-color: black;
-  --shadow-color: rgb(189, 189, 189);
+  --gray-color: rgb(189, 189, 189);
   --light-color: white;
   --primary-color: rgb(119, 189, 67);
   --primary-color-dark: rgb(88, 137, 50);
@@ -83,7 +83,7 @@ a:active {
 }
 
 a:focus {
-  outline: 1px dashed var(--secondary-color);
+  outline: 1px dashed var(--gray-color);
 }
 
 a:active {
@@ -99,7 +99,7 @@ a:hover {
   align-items: flex-start;
   background-color: var(--primary-color);
   background: linear-gradient(to top, var(--secondary-color), var(--primary-color));
-  box-shadow: 3px 2px 5px var(--shadow-color);
+  box-shadow: 3px 2px 5px var(--gray-color);
   color: var(--light-color);
   display: flex;
   margin-bottom: 20px;
@@ -295,7 +295,7 @@ a:hover {
 .sidebar-navigation ul li a {
   background-color: var(--secondary-color);
   border-radius: 10px;
-  box-shadow: 2px 2px 2px var(--shadow-color);
+  box-shadow: 2px 2px 2px var(--gray-color);
   color: var(--light-color);
   padding: 10px 20px;
   transition: margin-left .2s;
