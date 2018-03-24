@@ -52,7 +52,7 @@ h1 {
 
 h2,
 h2 a {
-  color: var(--secondary-color);
+  color: var(--secondary-color) !important;
   font-size: 1.4rem;
   margin: 0;
   text-decoration: none;
@@ -336,6 +336,31 @@ a:hover {
 
 .footer-section {
   padding: 10px;
+}
+
+.footer-icons-list {
+  display: flex;
+  flex-flow: row nowrap;
+  list-style: none;
+  padding: 0;
+  margin: 5px 0 0 5px;
+}
+
+.footer-icon {
+  margin: 0 5px;
+}
+
+.footer-icon:first-of-type {
+  margin-left: 0;
+}
+
+.footer-icon:last-of-type {
+  margin-right: 0;
+}
+
+.footer-icon a img {
+  width: 35px;
+  height: 35px;
 }
 
 /* Media Queries */
