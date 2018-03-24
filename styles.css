@@ -10,6 +10,7 @@
   --primary-color-dark: rgb(88, 137, 50);
   --secondary-color: rgb(57, 157, 89);
   --secondary-color-dark: rgb(43, 118, 67);
+  --tertiary-color: rgb(137, 67, 189);
 }
 
 /* General */
@@ -79,7 +80,7 @@ a {
 }
 
 a:active {
-  color: var(--primary-color-dark);
+  color: var(--secondary-color-dark);
 }
 
 a:focus {
@@ -250,7 +251,7 @@ a:hover {
 /* Post Loop */
 .content-preview-post {
   align-items: center;
-  border-bottom: 2px solid var(--primary-color);
+  border-bottom: 2px solid var(--tertiary-color);
   display: flex;
   flex-flow: row nowrap;
   margin-bottom: 10px;
@@ -326,7 +327,7 @@ a:hover {
 }
 
 .footer-content {
-  border-top: 3px solid var(--primary-color);
+  border-top: 3px solid var(--tertiary-color);
   display: flex;
   justify-content: space-between;
   min-height: 200px;
