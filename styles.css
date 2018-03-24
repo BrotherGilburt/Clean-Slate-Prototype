@@ -1,8 +1,7 @@
 /* Fonts */
-
 @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro');
-/* Colors */
 
+/* Colors */
 :root {
   --dark-color: rgb(0, 0, 0);
   --gray-color: rgb(189, 189, 189);
@@ -361,6 +360,16 @@ a:hover {
 .footer-icon a img {
   width: 35px;
   height: 35px;
+}
+
+.footer-logo {
+  margin: 5px 0 0 5px;
+}
+
+.footer-logo a img,
+.footer-logo img {
+  height: auto;
+  width: 200px;
 }
 
 /* Media Queries */
