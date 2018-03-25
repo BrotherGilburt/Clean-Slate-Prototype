@@ -156,7 +156,7 @@ a:hover {
 .header-navigation ul li a:hover,
 .header-navigation ul li a:active {
   background-color: inherit;
-  border-bottom: 5px solid var(--tertiary-color);
+  border-bottom: 5px solid var(--light-color);
   color: inherit;
 }
 
@@ -167,7 +167,7 @@ a:hover {
 .header-navigation ul li.current-menu-item a,
 .header-navigation ul li.current-menu-item a:hover,
 .header-navigation ul li.current-menu-item a:active {
-  border-bottom: 5px solid var(--tertiary-color);
+  border-bottom: 5px solid var(--light-color);
 }
 
 /*Header Menu Link (Mobile)*/
