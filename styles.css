@@ -265,6 +265,7 @@ a:hover {
 }
 
 .preview-post-image {
+  align-self: flex-start;
   flex: none;
   min-width: 250px;
   width: 33%;
